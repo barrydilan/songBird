@@ -1,0 +1,18 @@
+.victorine-question {
+    background-color: rgb(40, 37, 37);
+    border: 1px solid wheat;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    &__pic {
+        margin-left: 10px;
+        max-width: 200px;
+        max-height: 200px;
+    }
+    &__right {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        margin-right: 100px;
+    }
+}

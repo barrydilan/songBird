@@ -1,0 +1,17 @@
+.victorine-selector {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(40, 37, 37);
+
+    &__theme {
+        text-align: center;
+        width: 16.6%;
+        background-color: rgb(27, 217, 151);
+        padding: 10px;
+
+        &--chosen {
+            background-color: rgb(5, 154, 102);
+        }
+    }
+
+}

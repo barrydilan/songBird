@@ -1,0 +1,22 @@
+.victorine-answers {
+    background-color: rgb(40, 37, 37);
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    &__variants-list {
+        
+        &__variant {
+            border: 1px solid gray;
+            padding: 10px;
+            padding-right: 300px;
+        }
+    }
+
+    &__victorine-info {
+        &__pic {
+            max-width: 200px;
+            max-height: 200px;
+        }
+    }
+}
