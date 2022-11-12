@@ -8,7 +8,10 @@ const nextBtn = document.querySelector(".victorine-button__button");
 const themeBtns = Array.from(document.querySelectorAll(".victorine-selector__theme"))
 const correctAudioEl = document.querySelector(".correct-audio");
 const correctPicEl = document.querySelector(".victorine-question__pic");
-const correctNameEl = document.querySelector(".victorine-question__name")
+const correctNameEl = document.querySelector(".victorine-question__name");
+let scoreTable = document.querySelector(".header__score");
+let score = 0;
+let tryCounter = 0;
 let theme = 0;
 let correctName = '';
 
@@ -57,6 +60,7 @@ function endGame() {
     theme = 0;
     themeBtns[5].classList.remove("victorine-selector__theme--chosen");
     console.log("game over")
+    score = 0;
     loadVictorine()
 }
 
@@ -67,11 +71,19 @@ function changeThemeBtnStyle(theme) {
 
 
 function checkAnswer(eventObj) {
+    let scoreUpdate = 0;
+    tryCounter++;
     eventObj.preventDefault();
     let clickedEl = eventObj.target;
     infoUpdate(clickedEl.innerText);
     if (clickedEl.innerText == correctName) {
         updateCorrectVictorine();
+        scoreUpdate = 6 - tryCounter;
+        tryCounter = 0;
+        score += scoreUpdate;
+        scoreTable.innerText = "Score: " + score;
+        nextBtn.removeAttribute("disabled");
+        return scoreUpdate;
     }
    
 }
@@ -82,16 +94,17 @@ function loadVictorine() {
         victorineVariants[i].innerText = birdsData[theme][i].name;
         victorineVariants[i].addEventListener("click", checkAnswer)
     }
+    scoreTable.innerText = "Score: " + score;
     let correct = getRandomInt(6);
     correctName = getRandomQuestion(correct);
     correctNameEl.innerText = "*****";
     correctPicEl.src = "/app/src/bird-outline.png";
-    // infoUpdate(birdsData[theme][0].name);
     infoPic.src = "/app/src/bird-outline.png";
     infoName.innerText = "Choose answer";
     infoSound.setAttribute("style", "visibility: hidden");
     themeBtns[theme].classList.add("victorine-selector__theme--chosen");
     if (theme>0) changeThemeBtnStyle(theme-1);
+    nextBtn.setAttribute("disabled", "true")
     
 }
 
