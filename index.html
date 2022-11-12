@@ -13,12 +13,12 @@
         <span class="header__score">Score:</span>
     </header>
     <section class="victorine-selector wrapper">
-        <div class="victorine-selector__theme victorine-selector__theme--chosen">Разминка</div>
         <div class="victorine-selector__theme">Разминка</div>
-        <div class="victorine-selector__theme">Разминка</div>
-        <div class="victorine-selector__theme">Разминка</div>
-        <div class="victorine-selector__theme">Разминка</div>
-        <div class="victorine-selector__theme">Разминка</div>
+        <div class="victorine-selector__theme ">Воробьиные</div>
+        <div class="victorine-selector__theme">Лесные</div>
+        <div class="victorine-selector__theme">Певчие</div>
+        <div class="victorine-selector__theme">Хищные</div>
+        <div class="victorine-selector__theme">Морские</div>
     </section>
     <section class="victorine-question wrapper">
         <img src="/app/src/bird-outline.png" alt="" class="victorine-question__pic">
@@ -26,10 +26,10 @@
             <h2 class="victorine-question__name">Bird</h2>
         <div class="victorine-question__audio">
             <figure>
-            <audio
+            <audio class="correct-audio"
                 controls
-                src="/media/cc0-audio/t-rex-roar.mp3">
-                    <a href="/media/cc0-audio/t-rex-roar.mp3">
+                src="">
+                    <a href="">
                     
                     </a>
             </audio>
@@ -39,6 +39,7 @@
     </section>
     <section class="victorine-answers wrapper">
         <div class="victorine-answers__variants-list">
+            
             <div class="victorine-answers__variants-list__variant">Bird</div>
             <div class="victorine-answers__variants-list__variant">Bird</div>
             <div class="victorine-answers__variants-list__variant">Bird</div>
@@ -51,10 +52,10 @@
             <h2 class="victorine-answers__victorine-info__name">Bird</h2>
             <div class="victorine-answers__victorine-question__audio">
                 <figure>
-                    <audio
+                    <audio class="info-audio"
                         controls
-                        src="/media/cc0-audio/t-rex-roar.mp3">
-                            <a href="/media/cc0-audio/t-rex-roar.mp3">
+                        src="">
+                            <a href="">
                             </a>
                     </audio>
                 </figure>
@@ -64,5 +65,8 @@
     <div class="victorine-button wrapper">
         <button class="victorine-button__button">Дальше</button>
     </div>
+    
+    <script src="app/js/birdsData.js" type="module"></script> 
+    <script src="app/js/app.js" type="module"></script> 
 </body>
 </html>
