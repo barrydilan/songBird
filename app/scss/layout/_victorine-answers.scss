@@ -2,23 +2,33 @@
     background-color: rgb(116, 214, 162);
     color: white;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: 20px;
     min-height: 350px;
+
+    @media (max-width:530px) {
+        flex-direction: column;
+    }
 
     &__variants-list {
         
         &__variant {
             border: 1px solid gray;
             padding: 10px;
-            padding-right: 300px;
+            padding-right: 20vw;
         }
     }
 
     &__victorine-info {
+       text-align: center;
         &__pic {
-            max-width: 200px;
-            max-height: 200px;
+            max-width: 225px;
+            max-height: 136px;
+        }
+
+        figure {
+            margin: 0;
+            max-width: 300px;
         }
     }
 }

@@ -63,7 +63,7 @@ function checkAnswer(eventObj) {
 
 function loadVictorine() {
   for (let i = 0; i < victorineVariants.length; i++) {
-     victorineVariants[i].removeAttribute("style");
+    victorineVariants[i].removeAttribute("style");
     victorineVariants[i].innerText = birdsData[theme][i].name;
     victorineVariants[i].addEventListener("click", checkAnswer);
   }

@@ -2,7 +2,6 @@
     display: flex;
     justify-content: space-between;
     background-color: rgb(40, 37, 37);
-
     &__theme {
         text-align: center;
         width: 16.6%;
@@ -13,5 +12,15 @@
             background-color: rgb(5, 154, 102);
         }
     }
+
+    @media (max-width:530px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+         
+        &__theme {
+            width: 50%;
+        }
+    }
+    
 
 }
