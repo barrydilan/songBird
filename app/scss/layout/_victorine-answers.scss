@@ -1,9 +1,11 @@
 .victorine-answers {
-    background-color: rgb(40, 37, 37);
+    background-color: rgb(116, 214, 162);
     color: white;
     display: flex;
     justify-content: space-evenly;
     gap: 20px;
+    min-height: 350px;
+
     &__variants-list {
         
         &__variant {

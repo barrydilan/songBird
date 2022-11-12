@@ -41,6 +41,7 @@ function updateAnswerInfo(variant){
     if (birdsData[theme][i].name == variant) {
         infoPic.src = birdsData[theme][i].image;
         infoName.innerText = birdsData[theme][i].name;
+        infoSound.setAttribute("style", "visibility: visible")
         infoSound.src = birdsData[theme][i].audio;
     }
 }
@@ -83,7 +84,12 @@ function loadVictorine() {
     }
     let correct = getRandomInt(6);
     correctName = getRandomQuestion(correct);
-    correctNameEl.innerText = "*****"
+    correctNameEl.innerText = "*****";
+    correctPicEl.src = "/app/src/bird-outline.png";
+    // infoUpdate(birdsData[theme][0].name);
+    infoPic.src = "/app/src/bird-outline.png";
+    infoName.innerText = "Choose answer";
+    infoSound.setAttribute("style", "visibility: hidden");
     themeBtns[theme].classList.add("victorine-selector__theme--chosen");
     if (theme>0) changeThemeBtnStyle(theme-1);
     
@@ -96,6 +102,7 @@ function getRandomInt(max) {
 
 function getRandomQuestion(correct) {
     let correctName = birdsData[theme][correct].name;
+    correctAudioEl.src = birdsData[theme][correct].audio;
     console.log(birdsData[theme][correct].name);
     return correctName;
 }
