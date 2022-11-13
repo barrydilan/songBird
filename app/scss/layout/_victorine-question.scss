@@ -1,19 +1,21 @@
 .victorine-question {
-    background-color: rgb(116, 214, 162);
-    border: 1px solid wheat;
+    background-color: #f7f8f7;
+    
     min-height: 200px;
     display: flex;
     justify-content: space-around;
+    margin-bottom: 30px;
+
     &__pic {
         margin-left: 10px;
-   
+        border-radius: 10px;
         max-width: 225px;
         max-height: 136px;
     }
     &__right {
         display: flex;
         flex-direction: column;
-        color: white;
+        color: #394980;
         margin-right: 100px;
         align-items: center;
     }

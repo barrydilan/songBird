@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="/dist/styles.css">
+    <title>SongBird</title>
+</head>
+<body>
+    <header class="header wrapper">
+        <h1 class="header__title">SongBird</h1>
+        <span class="header__score">Score: 0</span>
+    </header>
+    <section class="victorine-selector wrapper">
+        <div class="victorine-selector__theme">Разминка</div>
+        <div class="victorine-selector__theme ">Воробьиные</div>
+        <div class="victorine-selector__theme">Лесные</div>
+        <div class="victorine-selector__theme">Певчие</div>
+        <div class="victorine-selector__theme">Хищные</div>
+        <div class="victorine-selector__theme">Морские</div>
+    </section>
+    <section class="victorine-question wrapper">
+        <img src="/app/src/bird-outline.png" alt="" class="victorine-question__pic">
+        <div class="victorine-question__right">
+            <h2 class="victorine-question__name">Bird</h2>
+        <div class="victorine-question__audio">
+            <figure>
+            <audio class="correct-audio"
+                controls
+                src="">
+                    <a href="">
+                    
+                    </a>
+            </audio>
+        </figure>
+        </div>
+        </div>
+    </section>
+    <section class="victorine-answers wrapper">
+        <div class="victorine-answers__variants-list">
+            
+            <div class="victorine-answers__variants-list__variant">Bird</div>
+            <div class="victorine-answers__variants-list__variant">Bird</div>
+            <div class="victorine-answers__variants-list__variant">Bird</div>
+            <div class="victorine-answers__variants-list__variant">Bird</div>
+            <div class="victorine-answers__variants-list__variant">Bird</div>
+            <div class="victorine-answers__variants-list__variant">Bird</div>
+        </div>
+        <div class="victorine-answers__victorine-info">
+            <img src="/app/src/bird-outline.png" alt="" class="victorine-answers__victorine-info__pic">
+            <h2 class="victorine-answers__victorine-info__name">Bird</h2>
+            <p class="victorine-answers__victorine-info__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit atque est soluta ut ex culpa veritatis at maxime laboriosam, explicabo numquam eum nulla fugit tempora repellat officiis veniam vel! Esse.</p>
+            <div class="victorine-answers__victorine-question__audio">
+                <figure>
+                    <audio class="info-audio"
+                        controls
+                        src="">
+                            <a href="">
+                            </a>
+                    </audio>
+                </figure>
+            </div>
+        </div>
+    </section>
+    <div class="victorine-button wrapper">
+        <button class="victorine-button__button">Дальше</button>
+    </div>    
+    <script src="app/js/birdsData.js" type="module"></script> 
+    <script src="app/js/app.js" type="module"></script> 
+</body>
+</html>

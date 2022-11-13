@@ -1,0 +1,35 @@
+.home {
+    background-color: #394980;
+
+    .header__title {
+        color: #394980 !important;
+    }
+}
+.home header {
+    width: 50%;
+    justify-content: center;
+    opacity: 0.9;
+    border-radius: 10px;
+    background-color: #F7F8F7;
+    
+}
+
+
+.home-buttons {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    
+    
+    button {
+        padding: 30px;
+        background-color: #F7F8F7;
+        margin-bottom: 30px;
+        width: 50%;
+        margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    color: #394980;
+    }
+
+}

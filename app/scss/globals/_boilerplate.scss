@@ -1,7 +1,10 @@
 html {
     box-sizing: border-box;
     font-size: 100%;
+    font-family: 'Roboto', sans-serif;
 };
+
+
 
 *, *::after, *::before {
     box-sizing: inherit;
@@ -10,8 +13,114 @@ html {
 body {
     margin: 0;
     padding: 0;
+    background-color: #8ED0EA;
 }
 
 audio {
-    width: 0;
+    width: 200px;
+}
+
+
+button:disabled {
+    opacity: 0.5;
+    cursor: none;
+}
+
+
+.resultBlock {
+    background-color: #f7f8f7;
+    height: 85vh;
+    padding: 20vw !important; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+  
+.resultBlock button {
+    width: 100%;
+        display: inline-block;
+        border: none;
+        padding: 1rem 2rem;
+        margin: 0;
+        text-decoration: none;
+        background: #394980;
+        color: #ffffff;
+        font-family: sans-serif;
+        font-size: 1rem;
+        cursor: pointer;
+        text-align: center;
+        transition: background 250ms ease-in-out, 
+                    transform 150ms ease;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        margin-bottom: 5px;
+}
+
+.resultBlock p {
+    font-size: 24px;
+    text-align: center
+}
+
+
+.topResultBlock {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: #f7f8f7;
+    
+}
+
+
+.topResultBlock p {
+    margin: 0 auto;
+    font-size: 24px;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.256);
+    display: block;
+    width: 50%;
+    text-align: left;
+    padding: 5px;
+    
+}
+
+.topResultBlock button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+        display: inline-block;
+        border: none;
+        padding: 1rem 2rem;
+        margin-top: 50px;
+        text-decoration: none;
+        background: #394980;
+        color: #ffffff;
+        font-family: sans-serif;
+        font-size: 1rem;
+        cursor: pointer;
+        text-align: center;
+        transition: background 250ms ease-in-out, 
+                    transform 150ms ease;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+}
+
+
+.button {
+    width: 100%;
+        display: inline-block;
+        border: none;
+        padding: 1rem 2rem;
+        margin: 0;
+        text-decoration: none;
+        background: rgb(27, 217, 151);
+        color: #ffffff;
+        font-family: sans-serif;
+        font-size: 1rem;
+        cursor: pointer;
+        text-align: center;
+        transition: background 250ms ease-in-out, 
+                    transform 150ms ease;
+        -webkit-appearance: none;
+        -moz-appearance: none;
 }

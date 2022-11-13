@@ -1,15 +1,15 @@
 .victorine-selector {
     display: flex;
     justify-content: space-between;
-    background-color: rgb(40, 37, 37);
+    background-color: #8ED0EA;
     &__theme {
         text-align: center;
         width: 16.6%;
-        background-color: rgb(27, 217, 151);
+        background-color: #f7f8f7;
         padding: 10px;
 
         &--chosen {
-            background-color: rgb(5, 154, 102);
+            background-color: #394980;
         }
     }
 
