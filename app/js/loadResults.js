@@ -37,10 +37,8 @@ export function loadTopResults() {
     const topResultBlock = document.createElement("div");
     topResultBlock.classList.add("topResultBlock");
     topResultBlock.classList.add("wrapper");
-    let res = localStorage
-      .getItem("gameResults")
-      .split(",")
-      .sort((a, b) => {
+    let res = Array.from(JSON.parse(localStorage.getItem("gameResults")))
+    .sort((a, b) => {
         return b - a;
       });
     for (let i = 0; i < 10; i++) {

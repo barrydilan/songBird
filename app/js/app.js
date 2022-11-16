@@ -35,11 +35,14 @@ const rightSound = new Audio("app/sound/right.mp3");
 let gameResults = [];
 
 if (localStorage.getItem("gameResults") !== null) {
-  let rs = localStorage.getItem("gameResults");
+  let rs = Array.from(JSON.parse(localStorage.getItem("gameResults")));
+  console.log(typeof rs)
+  console.log(gameResults)
   console.log(rs);
   for (let i = 0; i < rs.length; i++) {
-    if (rs[i] !== ",") gameResults.push(rs[i]);
+    if (rs[i]) gameResults.push(rs[i]);
   }
+  console.log(gameResults)
 }
 
 // function showResults() {
@@ -65,7 +68,7 @@ function nextRound() {
 
 function endGame() {
   gameResults.push(+score);
-  localStorage.setItem("gameResults", gameResults);
+  localStorage.setItem("gameResults", JSON.stringify(gameResults));
   loadResults(score);
   theme = 0;
   themeBtns[5].classList.remove("victorine-selector__theme--chosen");
