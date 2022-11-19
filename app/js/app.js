@@ -129,7 +129,7 @@ function getRandomInt(max) {
 function getRandomQuestion(correct) {
   let correctName = birdsData[theme][correct].name;
   correctAudioEl.src = birdsData[theme][correct].audio;
-  console.log(birdsData[theme][correct].name);
+  // console.log(birdsData[theme][correct].name);
   return correctName;
 }
 
