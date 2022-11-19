@@ -1,8 +1,36 @@
 .home {
     background-color: #394980;
+   display: flex;
+   flex-direction: column;
+   row-gap: 100px;
+   min-height: 100vh;
+   justify-content: flex-start;
+
 
     .header__title {
         color: #394980 !important;
+    }
+
+
+    .footer {
+    opacity: 0.9;
+    border-radius: 10px;
+    background-color: #F7F8F7;
+    width: 60%;
+    padding-left: 10%;
+    padding-right: 10%;
+    align-items: baseline;
+    gap: 50px;
+    font-size: 16px;
+     a {
+        color: #394980;
+     }
+
+     @media (max-width:340px) {
+        flex-direction: column;
+        align-items: center;
+     }
+
     }
 }
 .home header {
@@ -32,4 +60,11 @@
     color: #394980;
     }
 
+}
+
+
+.home-buttons button:hover {
+    scale: 1.1;
+    transition: 0.2s ease-in-out;
+    color: black;
 }

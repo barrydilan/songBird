@@ -1,0 +1,24 @@
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    align-items: baseline;
+    font-size: 18px;
+    color: #F7F8F7;
+    background-color: #394980;
+    padding-left: 20%;
+    padding-right: 20%;
+
+    a {
+        color: #F7F8F7;
+    }
+    p:first-child {
+        // flex-grow: 2;
+        
+    }
+
+    .rs-logo {
+        width: 50px;
+        flex-grow: 0;
+    }
+}

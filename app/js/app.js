@@ -144,6 +144,7 @@ function updateAnswerInfo(variant) {
       infoName.innerText = birdsData[theme][i].name;
       infoSound.setAttribute("style", "visibility: visible");
       infoSound.src = birdsData[theme][i].audio;
+      
       infoText.setAttribute("style", "visibility:visible");
       infoText.innerText = birdsData[theme][i].description;
     }
