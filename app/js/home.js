@@ -11,30 +11,48 @@ galletyBtn.addEventListener("click", loadGallery);
 
 function loadGallery() {
   let n = 0;
+  
   const body = document.querySelector("body");
   const header = document.querySelector("header");
   const footer = document.querySelector("footer");
   const nxtBtn = document.createElement("button");
   const prvBtn = document.createElement("button");
-  nxtBtn.innerText = ">";
+  nxtBtn.innerText = "Вперед";
+  prvBtn.innerText = "Назад";
+  nxtBtn.setAttribute("style", "right:0%")
+  prvBtn.setAttribute("style", "left:0%")
 
-  prvBtn.innerText = ">";
+  nxtBtn.classList.add("nxtButtons");
+  prvBtn.classList.add("nxtButtons");
+
+
   body.innerHTML = "";
   body.append(header);
   body.append(fillGallery(n));
+  body.append(prvBtn);
   body.append(nxtBtn);
-  function updateGallery() {
+  function nxtGallery() {
     if (n>=5) n =0;
     n++;
     body.innerHTML = "";
     body.append(header);
     body.append(fillGallery(n));
+    body.append(prvBtn);
     body.append(nxtBtn);
-    // fillGallery(n);
-    // console.log(n)
-    // console.log(fillGallery(n))
   }
-  nxtBtn.addEventListener("click", updateGallery);
+
+  function prvGallery() {
+    if (n==0) n=5;
+    n--;
+    body.innerHTML = "";
+    body.append(header);
+    body.append(fillGallery(n));
+    body.append(prvBtn);
+    body.append(nxtBtn);
+  }
+
+  nxtBtn.addEventListener("click", nxtGallery);
+  prvBtn.addEventListener("click", prvGallery);
   body.append(footer);
 }
 

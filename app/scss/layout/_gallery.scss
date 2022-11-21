@@ -18,10 +18,9 @@
 
 
         .gallery-item__image {
-            
             max-width: 50%;
             max-height: 300px;
-            border-radius: 50%;
+            // border-radius: 50%;
         }
 
         audio {
@@ -46,19 +45,44 @@
         }
     }
 
-    &__gallery-item:hover {
-       
-
-    }
-
-    @media (max-width:600px) {
+    @media (max-width:670px) {
         flex-direction: column;
 
 
         &__gallery-item {
             width: 100%;
         }
+
+      
+    }
+}
+
+body {
+    position: relative;
+}
+
+.nxtButtons {
+position: absolute;
+top:50%;
+padding: 10px;
+outline: none;
+background: #F7F8F7;
+        color: #394980;
+        font-family: sans-serif;
+border-radius: 10%;
+}
+
+@media (max-width: 670px) {
+    .nxtButtons {
+        position: static;
+       
+        width: 50%;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        border-radius: 0;
     }
 
-
+    .home {
+        row-gap: 0px;
+    }
 }
