@@ -62,15 +62,24 @@ function fillGallery(n) {
   galleryDiv.classList.add("gallery-container");
   for (let i = 0; i < birdsData.length; i++) {
     let galleryCard = document.createElement("div");
-    // let itemAudio = document.createElement('audio');
-    // itemAudio.src = birdsData[n][i].audio
-    // itemAudio.controls = true;
+    let playBtn = document.createElement("img");
+    playBtn.src = 'app/src/play.svg'
+    playBtn.classList.add("playBtn");
+    let audio = new Audio();
+    playBtn.addEventListener("click", () => {
+      if (!audio.paused) {console.log("daw"); audio.pause(); playBtn.src = 'app/src/play.svg'; return}
+      audio.src = birdsData[n][i].audio;
+      playBtn.src = 'app/src/stop.svg';
+      audio.play();
+    })
+
     galleryCard.classList.add("gallery-container__gallery-item");
     galleryCard.innerHTML = `<img class="gallery-item__image" src=${birdsData[n][i].image}></img><div class="item-right"><h2 class="gallery-item__name">${birdsData[n][i].name}</h2>
-    <audio controls src=${birdsData[n][i].audio}></audio></div>
+    </div>
     <p class="gallery-item__description">${birdsData[n][i].description}</p>
     `;
     // galleryCard.append(itemAudio)
+    galleryCard.append(playBtn)
     galleryDiv.append(galleryCard);
   }
   return galleryDiv;

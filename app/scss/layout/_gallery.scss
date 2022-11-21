@@ -26,7 +26,7 @@
         audio {
             display: block;
             visibility: visible;
-            width: 50px;
+            width: 100px;
         }
 
         p {
@@ -41,7 +41,8 @@
         }
 
         .gallery-item__name {
-            font-size: 16px;
+            font-size: 20px;
+            padding: 5px;
         }
     }
 
@@ -54,6 +55,11 @@
         }
 
       
+    }
+
+    .playBtn {
+        width: 50px;
+        height: 50px;
     }
 }
 
