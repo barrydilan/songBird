@@ -164,5 +164,8 @@ function updateCorrectVictorine() {
   }
 }
 
+
+console.log("Все пункты выполнены, кроме аудиоплеера и перевода на два языка - (-30 баллов). 240/270.")
+
 loadVictorine();
 

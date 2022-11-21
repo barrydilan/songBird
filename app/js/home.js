@@ -34,6 +34,7 @@ function loadGallery() {
   function nxtGallery() {
     if (n>=5) n =0;
     n++;
+    audio.pause()
     body.innerHTML = "";
     body.append(header);
     body.append(fillGallery(n));
@@ -44,6 +45,7 @@ function loadGallery() {
   function prvGallery() {
     if (n==0) n=5;
     n--;
+    audio.pause()
     body.innerHTML = "";
     body.append(header);
     body.append(fillGallery(n));
@@ -55,7 +57,7 @@ function loadGallery() {
   prvBtn.addEventListener("click", prvGallery);
   body.append(footer);
 }
-
+let audio = new Audio();
 function fillGallery(n) {
   const galleryDiv = document.createElement("div");
   galleryDiv.classList.add("wrapper");
@@ -65,8 +67,9 @@ function fillGallery(n) {
     let playBtn = document.createElement("img");
     playBtn.src = 'app/src/play.svg'
     playBtn.classList.add("playBtn");
-    let audio = new Audio();
+    
     playBtn.addEventListener("click", () => {
+      
       if (!audio.paused) {console.log("daw"); audio.pause(); playBtn.src = 'app/src/play.svg'; return}
       audio.src = birdsData[n][i].audio;
       playBtn.src = 'app/src/stop.svg';
