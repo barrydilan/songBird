@@ -89,7 +89,7 @@ function checkAnswer(eventObj) {
     tryCounter = 0;
     score += scoreUpdate;
     scoreTable.innerText = "Score: " + score;
-    clickedEl.setAttribute("style", "color:green");
+    clickedEl.firstChild.classList.add("indicator--green");
     if (nextBtn.hasAttribute("disabled")) {
       correctAudioEl.pause();
       rightSound.play();
@@ -98,16 +98,23 @@ function checkAnswer(eventObj) {
   }
   if (nextBtn.hasAttribute("disabled")) {
     wrongSound.play();
-    clickedEl.setAttribute("style", "color:red");
+    clickedEl.firstChild.classList.add("indicator--red");
   }
+
 }
 
 function loadVictorine() {
+  const indicatorSpan = document.createElement("span");
+  indicatorSpan.classList.add("indicator");
   for (let i = 0; i < victorineVariants.length; i++) {
     victorineVariants[i].removeAttribute("style");
-    victorineVariants[i].innerText = birdsData[theme][i].name;
+    victorineVariants[i].innerHTML = `<span class="indicator"></span>${birdsData[theme][i].name}`;
     victorineVariants[i].addEventListener("click", checkAnswer);
   }
+  // for (let i = 0; i < victorineVariants.length; i++) {
+  //   victorineVariants[i].prepend(indicatorSpan)
+  // }
+
   scoreTable.innerText = "Score: " + score;
   let correct = getRandomInt(6);
   correctName = getRandomQuestion(correct);
