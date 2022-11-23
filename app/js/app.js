@@ -77,6 +77,8 @@ function endGame() {
   loadVictorine();
 }
 
+
+
 function checkAnswer(eventObj) {
   let scoreUpdate = 0;
   tryCounter++;
@@ -100,7 +102,8 @@ function checkAnswer(eventObj) {
     wrongSound.play();
     clickedEl.firstChild.classList.add("indicator--red");
   }
-
+  clickedEl.removeEventListener('click', checkAnswer);
+  console.log(clickedEl)
 }
 
 function loadVictorine() {
@@ -121,7 +124,7 @@ function loadVictorine() {
   correctNameEl.innerText = "*****";
   correctPicEl.src = "app/src/bird-outline.png";
   infoPic.src = "app/src/bird-outline.png";
-  infoName.innerText = "Выбери вариант ответа";
+  infoName.innerText = "Выбери вариант ответа. Нажми на название птицы, чтобы послушать плеер";
   infoText.setAttribute("style", "visibility:hidden");
   infoSound.setAttribute("style", "visibility: hidden");
   themeBtns[theme].classList.add("victorine-selector__theme--chosen");
@@ -145,10 +148,12 @@ function changeThemeBtnStyle(theme) {
 }
 
 function updateAnswerInfo(variant) {
+  let species = document.querySelector(".species")
   for (let i = 0; i < birdsData[theme].length; i++) {
     if (birdsData[theme][i].name == variant) {
       infoPic.src = birdsData[theme][i].image;
       infoName.innerText = birdsData[theme][i].name;
+      species.innerText = birdsData[theme][i].species;
       infoSound.setAttribute("style", "visibility: visible");
       infoSound.src = birdsData[theme][i].audio;
       
