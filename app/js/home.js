@@ -78,6 +78,7 @@ function fillGallery(n) {
 
     galleryCard.classList.add("gallery-container__gallery-item");
     galleryCard.innerHTML = `<img class="gallery-item__image" src=${birdsData[n][i].image}></img><div class="item-right"><h2 class="gallery-item__name">${birdsData[n][i].name}</h2>
+    <span class="species">${birdsData[n][i].species}</span>
     </div>
     <p class="gallery-item__description">${birdsData[n][i].description}</p>
     `;
