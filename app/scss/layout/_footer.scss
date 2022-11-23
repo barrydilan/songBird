@@ -1,8 +1,14 @@
 .footer {
+    @media (max-width:480px) {
+        flex-direction: column;
+        
+    }
     display: flex;
+
     justify-content: space-evenly;
     gap: 30px;
-    align-items: baseline;
+            align-items: center;
+
     font-size: 18px;
     color: #F7F8F7;
     background-color: #394980;
@@ -21,4 +27,7 @@
         width: 50px;
         flex-grow: 0;
     }
+
+
+    
 }
