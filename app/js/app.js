@@ -27,6 +27,8 @@ const correctPicEl = document.querySelector(".victorine-question__pic");
 const correctNameEl = document.querySelector(".victorine-question__name");
 const wrongSound = new Audio("app/sound/wrong.mp3");
 const rightSound = new Audio("app/sound/right.mp3");
+let species = document.querySelector(".species")
+
 // const body = document.querySelector("body");
 // const header = document.querySelector("header");
 // const topResBtn = document.createElement("button");
@@ -127,6 +129,7 @@ function loadVictorine() {
   infoName.innerText = "Выбери вариант ответа. Нажми на название птицы, чтобы послушать плеер";
   infoText.setAttribute("style", "visibility:hidden");
   infoSound.setAttribute("style", "visibility: hidden");
+  species.setAttribute("style", "visibility: hidden");
   themeBtns[theme].classList.add("victorine-selector__theme--chosen");
   if (theme > 0) changeThemeBtnStyle(theme - 1);
   nextBtn.setAttribute("disabled", "true");
@@ -148,7 +151,6 @@ function changeThemeBtnStyle(theme) {
 }
 
 function updateAnswerInfo(variant) {
-  let species = document.querySelector(".species")
   for (let i = 0; i < birdsData[theme].length; i++) {
     if (birdsData[theme][i].name == variant) {
       infoPic.src = birdsData[theme][i].image;
